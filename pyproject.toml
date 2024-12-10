@@ -1,5 +1,5 @@
 [build-system]
-build-backend = 'nleq2'
+build-backend = 'mesonpy'
 requires = [
   'meson-python',
   'meson>=1.2.3',
@@ -15,7 +15,6 @@ version = '4.3'
 packages = ['nleq2']
 dependencies = ['numpy']
 description = 'Project with mixed pure Python and Fortran sources'
-readme = 'README.md'
 requires-python = '>=3.9'
 authors = [
   {name = 'Johann Rohwer', email = 'j.m.rohwer@gmail.com'},

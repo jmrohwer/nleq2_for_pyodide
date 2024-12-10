@@ -6,7 +6,6 @@
 #)
 
 nleq2_lib = static_library('nleq2_lib',
-  'fmath.f',
   'nleq2.f',
   'linalg_nleq2.f',
   'zibmon.f',
