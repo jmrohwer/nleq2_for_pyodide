@@ -1,10 +1,10 @@
 package:
-  name: mfm
-  version: 1.0.4
+  name: nleq2
+  version: 4.3
   top-level:
-    - mfm
+    - nleq2
 source:
-  path: ./mfm
+  path: ./nleq2_for_pyodide
 #  url: https://github.com/jmrohwer/mfm/archive/refs/tags/v1.0.4.zip
 #  sha256: 34528c94a00077aeb47bbf84839b8fb7d2371c02e97baedcdbe4fc82c90ebff7
 build:
@@ -41,7 +41,7 @@ requirements:
     - gfortran
 about:
   summary:
-    Project with mixed pure Python and Fortran sources
+    NLEQ2 non-linear solver
   license: BSD 3-Clause
 extra:
   recipe-maintainers:
