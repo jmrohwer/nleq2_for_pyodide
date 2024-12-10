@@ -32,8 +32,8 @@ static PyObject *nleq2_module;
 typedef signed char signed_char;
 
 /****************** See f2py2e/cfuncs.py: typedefs_generated ******************/
-typedef void(*cb_jac_in_nleq2__user__routines_typedef)(int *,int *,double *,double *,int *);
-typedef void(*cb_fcn_in_nleq2__user__routines_typedef)(int *,double *,double *,int *);
+typedef int(*cb_jac_in_nleq2__user__routines_typedef)(int *,int *,double *,double *,int *);
+typedef int(*cb_fcn_in_nleq2__user__routines_typedef)(int *,double *,double *,int *);
 
 /********************** See f2py2e/cfuncs.py: cppmacros **********************/
 
@@ -446,7 +446,7 @@ static cb_fcn_in_nleq2__user__routines_t *get_active_cb_fcn_in_nleq2__user__rout
 #endif
 
 /*typedef void(*cb_fcn_in_nleq2__user__routines_typedef)(int *,double *,double *,int *);*/
-static void cb_fcn_in_nleq2__user__routines (int *n_cb_capi,double *x,double *f,int *ifail_cb_capi) {
+static int cb_fcn_in_nleq2__user__routines (int *n_cb_capi,double *x,double *f,int *ifail_cb_capi) {
     cb_fcn_in_nleq2__user__routines_t cb_local = { NULL, NULL, 0 };
     cb_fcn_in_nleq2__user__routines_t *cb = NULL;
     PyTupleObject *capi_arglist = NULL;
@@ -644,7 +644,7 @@ static cb_jac_in_nleq2__user__routines_t *get_active_cb_jac_in_nleq2__user__rout
 #endif
 
 /*typedef void(*cb_jac_in_nleq2__user__routines_typedef)(int *,int *,double *,double *,int *);*/
-static void cb_jac_in_nleq2__user__routines (int *n_cb_capi,int *m1_cb_capi,double *x,double *a,int *ifail_cb_capi) {
+static int cb_jac_in_nleq2__user__routines (int *n_cb_capi,int *m1_cb_capi,double *x,double *a,int *ifail_cb_capi) {
     cb_jac_in_nleq2__user__routines_t cb_local = { NULL, NULL, 0 };
     cb_jac_in_nleq2__user__routines_t *cb = NULL;
     PyTupleObject *capi_arglist = NULL;
