@@ -427,7 +427,7 @@ static cb_fcn_in_nleq2__user__routines_t *swap_active_cb_fcn_in_nleq2__user__rou
     return prev;
 }
 
-static cb_fcn_in_nleq2__user__routines_t *get_active_cb_fcn_in_nleq2__user__routines(void) {
+static cb_fcn_in_nleq2__user__routines_t *get_active_cb_fcn_in_nleq2__user__routines() {
     return _active_cb_fcn_in_nleq2__user__routines;
 }
 
@@ -438,7 +438,7 @@ static cb_fcn_in_nleq2__user__routines_t *swap_active_cb_fcn_in_nleq2__user__rou
     return (cb_fcn_in_nleq2__user__routines_t *)F2PySwapThreadLocalCallbackPtr(key, ptr);
 }
 
-static cb_fcn_in_nleq2__user__routines_t *get_active_cb_fcn_in_nleq2__user__routines(void) {
+static cb_fcn_in_nleq2__user__routines_t *get_active_cb_fcn_in_nleq2__user__routines() {
     char *key = "__f2py_cb_cb_fcn_in_nleq2__user__routines";
     return (cb_fcn_in_nleq2__user__routines_t *)F2PyGetThreadLocalCallbackPtr(key);
 }
@@ -625,7 +625,7 @@ static cb_jac_in_nleq2__user__routines_t *swap_active_cb_jac_in_nleq2__user__rou
     return prev;
 }
 
-static cb_jac_in_nleq2__user__routines_t *get_active_cb_jac_in_nleq2__user__routines(void) {
+static cb_jac_in_nleq2__user__routines_t *get_active_cb_jac_in_nleq2__user__routines() {
     return _active_cb_jac_in_nleq2__user__routines;
 }
 
@@ -636,7 +636,7 @@ static cb_jac_in_nleq2__user__routines_t *swap_active_cb_jac_in_nleq2__user__rou
     return (cb_jac_in_nleq2__user__routines_t *)F2PySwapThreadLocalCallbackPtr(key, ptr);
 }
 
-static cb_jac_in_nleq2__user__routines_t *get_active_cb_jac_in_nleq2__user__routines(void) {
+static cb_jac_in_nleq2__user__routines_t *get_active_cb_jac_in_nleq2__user__routines() {
     char *key = "__f2py_cb_cb_jac_in_nleq2__user__routines";
     return (cb_jac_in_nleq2__user__routines_t *)F2PyGetThreadLocalCallbackPtr(key);
 }
