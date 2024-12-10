@@ -38,5 +38,5 @@ py.install_sources(
 
 install_data(
   ['nleq2_readme.txt', 'readme.txt'],
-  install_dir: 'nleq2/nleq2'
+  install_dir: 'nleq2'
 )
