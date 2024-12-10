@@ -8,12 +8,10 @@ requires = [
 
 [tool.meson-python.args]
 compile = ['-j4']
-dist = ['--allow-dirty']
 
 [project]
 name = 'mfm'
 version = '4.3'
-packages = ['nleq2']
 dependencies = ['numpy']
 description = 'Project with mixed pure Python and Fortran sources'
 requires-python = '>=3.9'
