@@ -401,7 +401,7 @@ double_from_pyobj(double* v, PyObject *obj, const char *errmess)
 
 
 /* See f2py2e/rules.py */
-extern void F_FUNC(nleq2,NLEQ2)(int*,cb_fcn_in_nleq2__user__routines_typedef,cb_jac_in_nleq2__user__routines_typedef,double*,double*,double*,int*,int*,int*,int*,int*,double*);
+extern int F_FUNC(nleq2,NLEQ2)(int*,cb_fcn_in_nleq2__user__routines_typedef,cb_jac_in_nleq2__user__routines_typedef,double*,double*,double*,int*,int*,int*,int*,int*,double*);
 /*eof externroutines*/
 
 /******************** See f2py2e/capi_rules.py: usercode1 ********************/
@@ -852,7 +852,7 @@ x,xscal,rtol,iopt,ierr = nleq2(fcn,jac,x,xscal,rtol,iopt,iwk,rwk,[n,liwk,lrwk,fc
 static PyObject *f2py_rout_nleq2_nleq2(const PyObject *capi_self,
                            PyObject *capi_args,
                            PyObject *capi_keywds,
-                           void (*f2py_func)(int*,cb_fcn_in_nleq2__user__routines_typedef,cb_jac_in_nleq2__user__routines_typedef,double*,double*,double*,int*,int*,int*,int*,int*,double*)) {
+                           int (*f2py_func)(int*,cb_fcn_in_nleq2__user__routines_typedef,cb_jac_in_nleq2__user__routines_typedef,double*,double*,double*,int*,int*,int*,int*,int*,double*)) {
     PyObject * volatile capi_buildvalue = NULL;
     volatile int f2py_success = 1;
 /*decl*/
