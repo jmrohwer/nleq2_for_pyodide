@@ -9,6 +9,9 @@ requires = [
 [tool.meson-python.args]
 compile = ['-j4']
 
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "class"
+
 [project]
 name = 'nleq2'
 version = '4.3'
