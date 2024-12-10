@@ -10,7 +10,7 @@ requires = [
 compile = ['-j4']
 
 [project]
-name = 'mfm'
+name = 'nleq2'
 version = '4.3'
 dependencies = ['numpy']
 description = 'Project with mixed pure Python and Fortran sources'
