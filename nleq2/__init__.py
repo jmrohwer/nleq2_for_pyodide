@@ -1,4 +1,4 @@
-from .fmath import fmath
+from .nleq2 import nleq2
 
 import os
 testdir = os.path.dirname(__file__)

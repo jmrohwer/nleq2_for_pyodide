@@ -1,9 +1,9 @@
-mymodule_dir = py.get_install_dir() / 'mfm'
+mymodule_dir = py.get_install_dir() / 'nleq2'
 
 py.install_sources([
     '__init__.py'
   ],
-  subdir: 'mfm'
+  subdir: 'nleq2'
 )
 
 pure_subdirs = [
@@ -52,4 +52,4 @@ fortranobject_dep = declare_dependency(
   include_directories: inc_np,
 )
 
-subdir('fmath')
+subdir('nleq2')

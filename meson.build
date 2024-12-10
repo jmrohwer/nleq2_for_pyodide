@@ -1,6 +1,6 @@
-project('mfm',
+project('nleq2',
         ['c', 'fortran'],
-        version : '1.0.4',
+        version : '4.3',
         meson_version: '>= 1.2.3'
 )
 
@@ -23,4 +23,4 @@ if ff.has_argument('-Wno-conversion')
   add_project_arguments('-Wno-conversion', language: 'fortran')
 endif
 
-subdir('mfm')
+subdir('nleq2')

@@ -1,5 +1,5 @@
 [build-system]
-build-backend = 'mesonpy'
+build-backend = 'nleq2'
 requires = [
   'meson-python',
   'meson>=1.2.3',
@@ -11,8 +11,8 @@ compile = ['-j4']
 
 [project]
 name = 'mfm'
-version = '1.0.4'
-packages = ['mfm', 'mwm.fmath']
+version = '4.3'
+packages = ['nleq2']
 dependencies = ['numpy']
 description = 'Project with mixed pure Python and Fortran sources'
 readme = 'README.md'
