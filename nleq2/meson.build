@@ -52,4 +52,6 @@ fortranobject_dep = declare_dependency(
   include_directories: inc_np,
 )
 
+lapack = dependency(['openblas', 'OpenBLAS'])
+
 subdir('nleq2')
