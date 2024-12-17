@@ -35,8 +35,10 @@ build:
 requirements:
   host:
     - numpy
+    - openblas
   run:
     - numpy
+    - openblas
   executable:
     - gfortran
 about:
