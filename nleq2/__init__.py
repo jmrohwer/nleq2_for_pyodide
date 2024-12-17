@@ -1,5 +1,5 @@
 import numpy as np
-# from .nleq2 import nleq2
+from .nleq2 import nleq2
 
 def test():
     def lin3(x):

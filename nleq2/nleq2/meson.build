@@ -30,12 +30,12 @@ py.extension_module(
   subdir: 'nleq2/nleq2'
 )
 
-#py.install_sources(
-#  [
-#    '__init__.py'
-#  ],
-#  subdir: 'nleq2/nleq2'
-#)
+py.install_sources(
+  [
+    '__init__.py'
+  ],
+  subdir: 'nleq2/nleq2'
+)
 
 install_data(
   ['nleq2_readme.txt', 'readme.txt'],
