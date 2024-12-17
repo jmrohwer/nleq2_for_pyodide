@@ -9,7 +9,7 @@ The main purpose is for testing and debugging the compilation with
 The module defines a single wrapped Fortran function:
 
 ```python
->>> help(nleq2.nleq2.nleq2)
+In [2]: nleq2.nleq2.nleq2?
 Signature:   nleq2.nleq2.nleq2(*args, **kwargs)
 Type:        fortran
 String form: <fortran function nleq2>
@@ -88,7 +88,10 @@ Call-back functions::
    $ python -m build .      or
    $ pip install .
    ```
-3. Test:
+3. Pyodide build:    
+   A build recipe is provided under `pyodide recipe`. This assumes that the source lives
+   in `packages/nleq2/nleq2_for_pyodide` in the Pyodide build tree.
+4. Test:
    ```python
    import nleq2
    nleq2.test()
