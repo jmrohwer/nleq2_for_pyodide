@@ -23,7 +23,7 @@ py.extension_module(
 #  'nleq2module.c',
   link_with: [nleq2_lib],
   c_args: [Wno_unused_variable],
-  dependencies: [fortranobject_dep],
+  dependencies: [lapack, fortranobject_dep],
   install: true,
   link_language: 'fortran',
   include_directories: inc_np,
