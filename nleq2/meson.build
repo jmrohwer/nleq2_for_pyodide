@@ -6,14 +6,6 @@ py.install_sources([
   subdir: 'nleq2'
 )
 
-pure_subdirs = [
-    'tests'
-]
-
-foreach subdir: pure_subdirs
-  install_subdir(subdir, install_dir: nleq2_dir, install_tag: 'python-runtime')
-endforeach
-
 Wno_unused_variable = cc.get_supported_arguments('-Wno-unused-variable')
 
 # Fortran warning flags
@@ -51,7 +43,5 @@ fortranobject_dep = declare_dependency(
   link_with: fortranobject_lib,
   include_directories: inc_np,
 )
-
-lapack = dependency(['openblas', 'OpenBLAS'])
 
 subdir('nleq2')
