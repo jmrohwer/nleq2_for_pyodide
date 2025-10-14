@@ -110,14 +110,14 @@ Call-back functions::
 
 1. Add the built wheel to your pyodide environment:
    ```shell
-   $ cd $PYODIDE_HOME/packages
+   $ cd ${PYODIDE_HOME}/packages
    $ cp nleq2/build/nleq2-4.3/dist/nleq2-4.3-cp313-cp313-pyodide_2025_0_wasm32.whl ../dist/
    ```
 
 1. Add the metadata for the package to the pyodide environment lockfile.
    A convenient script has been provided for this:
    ```shell
-   $ cd $PYODIDE_HOME/dist
+   $ cd ${PYODIDE_HOME}/dist
    $ pip install simple_file_checksum
    $ python ../packages/nleq2/nleq2/utils/update_pyodide_lockfile nleq2-4.3-cp313-cp313-pyodide_2025_0_wasm32.whl 'numpy'
    ```
