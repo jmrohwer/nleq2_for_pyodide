@@ -417,7 +417,7 @@ static cb_fcn_in_nleq2__user__routines_t *swap_active_cb_fcn_in_nleq2__user__rou
     return prev;
 }
 
-static cb_fcn_in_nleq2__user__routines_t *get_active_cb_fcn_in_nleq2__user__routines() {
+static cb_fcn_in_nleq2__user__routines_t *get_active_cb_fcn_in_nleq2__user__routines(void) {
     return _active_cb_fcn_in_nleq2__user__routines;
 }
 
@@ -428,7 +428,7 @@ static cb_fcn_in_nleq2__user__routines_t *swap_active_cb_fcn_in_nleq2__user__rou
     return (cb_fcn_in_nleq2__user__routines_t *)F2PySwapThreadLocalCallbackPtr(key, ptr);
 }
 
-static cb_fcn_in_nleq2__user__routines_t *get_active_cb_fcn_in_nleq2__user__routines() {
+static cb_fcn_in_nleq2__user__routines_t *get_active_cb_fcn_in_nleq2__user__routines(void) {
     char *key = "__f2py_cb_cb_fcn_in_nleq2__user__routines";
     return (cb_fcn_in_nleq2__user__routines_t *)F2PyGetThreadLocalCallbackPtr(key);
 }
@@ -474,7 +474,7 @@ f2py_cb_start_clock();
     cb_fcn_in_nleq2__user__routines_typedef cb_fcn_in_nleq2__user__routines_cptr;
     cb_fcn_in_nleq2__user__routines_cptr = F2PyCapsule_AsVoidPtr(cb->capi);
     (*cb_fcn_in_nleq2__user__routines_cptr)(n_cb_capi,x,f,ifail_cb_capi);
-    return 0;
+    return;
     }
     if (capi_arglist==NULL) {
         capi_longjmp_ok = 0;
@@ -615,7 +615,7 @@ static cb_jac_in_nleq2__user__routines_t *swap_active_cb_jac_in_nleq2__user__rou
     return prev;
 }
 
-static cb_jac_in_nleq2__user__routines_t *get_active_cb_jac_in_nleq2__user__routines() {
+static cb_jac_in_nleq2__user__routines_t *get_active_cb_jac_in_nleq2__user__routines(void) {
     return _active_cb_jac_in_nleq2__user__routines;
 }
 
@@ -626,7 +626,7 @@ static cb_jac_in_nleq2__user__routines_t *swap_active_cb_jac_in_nleq2__user__rou
     return (cb_jac_in_nleq2__user__routines_t *)F2PySwapThreadLocalCallbackPtr(key, ptr);
 }
 
-static cb_jac_in_nleq2__user__routines_t *get_active_cb_jac_in_nleq2__user__routines() {
+static cb_jac_in_nleq2__user__routines_t *get_active_cb_jac_in_nleq2__user__routines(void) {
     char *key = "__f2py_cb_cb_jac_in_nleq2__user__routines";
     return (cb_jac_in_nleq2__user__routines_t *)F2PyGetThreadLocalCallbackPtr(key);
 }
@@ -673,7 +673,7 @@ f2py_cb_start_clock();
     cb_jac_in_nleq2__user__routines_typedef cb_jac_in_nleq2__user__routines_cptr;
     cb_jac_in_nleq2__user__routines_cptr = F2PyCapsule_AsVoidPtr(cb->capi);
     (*cb_jac_in_nleq2__user__routines_cptr)(n_cb_capi,m1_cb_capi,x,a,ifail_cb_capi);
-    return 0;
+    return;
     }
     if (capi_arglist==NULL) {
         capi_longjmp_ok = 0;
