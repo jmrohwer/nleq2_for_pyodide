@@ -1,0 +1,41 @@
+#!/usr/bin/env python
+
+import os
+import shutil
+import sys
+import glob
+import json
+from simple_file_checksum import get_checksum
+
+lf = 'pyodide-lock.json'
+bakfiles = glob.glob('pyodide-lock*.bak')
+idx = str(len(bakfiles)+1)
+newbakfile = 'pyodide-lock.json.'+idx+'.bak'
+
+# lock file dictionary
+lfd = json.load(open(lf, 'r'))
+
+# prepare new entry
+toadd = sys.argv[1]
+arg2 = sys.argv[2]
+deps = arg2.split(',')
+splits = toadd.split('-')
+name = splits[0]
+ver = splits[1]
+checksum = get_checksum(toadd, 'sha256')
+
+# dictionary to add
+d = {}
+d['depends'] = deps
+d['file_name'] = toadd
+d['imports'] = [name]
+d['name'] = name
+d['sha256'] = checksum
+d['version'] = ver
+
+# update lockfile
+lfd['packages'][name] = d
+
+# save
+shutil.move(lf, newbakfile)
+json.dump(lfd, open(lf, 'w'))
