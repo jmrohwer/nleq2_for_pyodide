@@ -128,7 +128,7 @@ Call-back functions::
    $ python -m http.server -d dist
    ```
 
-1. Test by pointing your browser to http://0.0.0.0:8000/, opening `console.html`,
+1. Test by pointing your browser to http://localhost:8000/, opening `console.html`,
    and running the following in the browser console:
    ```python
    >>> import nleq2
