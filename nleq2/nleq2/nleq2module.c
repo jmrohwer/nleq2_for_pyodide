@@ -50,6 +50,18 @@ typedef int(*cb_fcn_in_nleq2__user__routines_typedef)(int *,double *,double *,in
 #define MIN(a,b) ((a < b) ? (a) : (b))
 #endif
 
+/* The following subroutine was added after the f2c translation */
+double d_sign(double *a, double *b)
+{
+  double x;
+  x = (*a >= 0 ? *a : - *a);
+  return( *b >= 0 ? x : -x);
+}
+
+double pow_dd(double *ap, double *bp)
+{
+return(pow(*ap, *bp) );
+}
 
 #define PRINTPYOBJERR(obj)\
     fprintf(stderr,"nleq2.error is related to ");\
