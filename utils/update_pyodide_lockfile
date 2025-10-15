@@ -17,8 +17,8 @@ lfd = json.load(open(lf, 'r'))
 
 # prepare new entry
 toadd = sys.argv[1]
-arg2 = sys.argv[2]
-deps = arg2.split(',')
+arg2 = sys.argv[2] if len(sys.argv) > 2 else None
+deps = arg2.split(',') if arg2 else []
 splits = toadd.split('-')
 name = splits[0]
 ver = splits[1]
